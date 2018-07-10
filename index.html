@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>蕾姆</title>
+    <link href="./res/animation.css" rel="stylesheet"></link>
+    <link href="./res/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>
+    <style>
+      html{
+         font-size:20px;
+      }
+      @font-face {
+        font-family:'dif';
+        src: url('res/DET.ttf');
+      }
+      div{
+        position: absolute;
+        left:0; top:0;
+        margin:0; padding:0;
+      }
+      body{
+        padding:0;
+        margin:0;
+      }
+      .defaultPanel{
+        background:rgb(240,240,240);
+        opacity:0.7;
+        border-radius: 6px;
+        -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.7);
+        
+      }
+      .defaultText{
+        color:rgb(35,35,35);
+        opacity:0.9;
+      }
+
+      .tip_text{
+        color: white;
+      }
+      .tip_success{
+        background:rgb(138,186,135);
+      }
+      .tip_info{
+        background:rgb(138,186,245); 
+      }
+      .tip_error{
+        background:rgb(245,116,115);
+      }
+      @keyframes lm_rotate{from{transform: rotate(0deg)}
+        to{transform: rotate(359deg)}
+      }
+
+    </style>
+
+    <script>
+
+    </script>
+
+  </head>
+  <body style="width:100%;height:100%;opacity:1;overflow:hidden;">
+
+    <!-- pet body -->
+    <div id="pet_body_1" style="width:7.5rem;height:8.2rem; top:3.4rem; left:0.3rem; background:url(res/body/b_lm_1.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_body_2" style="width:7.5rem;height:8.2rem; top:3.4rem; left:0.3rem; background:url(res/body/b_lm_2.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_body_3" style="width:7.5rem;height:8.2rem; top:3.4rem; left:0.3rem; background:url(res/body/b_lm_3.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_body_4" style="width:7.5rem;height:8.2rem; top:3.4rem; left:0.3rem; background:url(res/body/b_lm_4.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_body_5" style="width:7.5rem;height:8.2rem; top:3.4rem; left:0.3rem; background:url(res/body/b_lm_5.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_body_6" style="width:7.5rem;height:8.2rem; top:3.4rem; left:0.3rem; background:url(res/body/b_lm_6.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_body_7" style="width:7.5rem;height:8.2rem; top:3.4rem; left:0.3rem; background:url(res/body/b_lm_7.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_body_8" style="width:7.5rem;height:8.2rem; top:3.4rem; left:0.3rem; background:url(res/body/b_lm_8.png) top center no-repeat; background-size:cover;"></div>
+    <!-- pet head -->
+    <div id="pet_head_1" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_1.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_2" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_2.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_3" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_3.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_4" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_4.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_5" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_5.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_6" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_6.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_7" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_7.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_8" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_8.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_9" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_9.png) top center no-repeat; background-size:cover;"></div>
+
+    <div id="pet_head_11" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_11.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_12" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_12.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_13" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_13.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_14" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_14.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_15" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_15.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_16" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_16.png) top center no-repeat; background-size:cover;"></div>
+    <div id="pet_head_17" style="width:3.9rem;height:3.45rem; top:0.5rem; left:3.2rem; background:url(res/head/h_lm_17.png) top center no-repeat; background-size:cover;"></div>
+    
+    <!-- 设置面板 -->
+    <div id="settingPanel" style="position:relative; width:7.7rem;height:10rem; margin-left:0.2rem; display:none;">
+      <div style="width:7.5rem;height:1.5rem;margin-top:0.5rem;">
+        <div class="defaultGroup" style="width:1.5rem;height:1.5rem;">
+          <div class="defaultPanel" style="width:100%;height:100%;"></div>
+        </div>
+        <div class="defaultGroup" style="width:1.5rem;height:1.5rem;margin-left:2rem;">
+          <div class="defaultPanel" style="width:100%;height:100%;"></div>
+        </div>
+        <div class="defaultGroup" style="width:1.5rem;height:1.5rem;margin-left:4rem;" onclick='lock()'>
+          <div class="defaultPanel" style="width:100%;height:100%;"></div>
+        </div>
+        <!-- 关闭按钮 -->
+        <div id="closeBtn" class="defaultGroup" style="width:1.5rem;height:1.5rem;margin-left:6rem;" onclick='closeApp()'>
+          <div class="defaultPanel" style="width:100%;height:100%;"></div>
+          <div class="defaultText" style="margin-left:0.42rem; margin-top:0.26rem;font-size:0.85rem;"><i class="fa fa-times"></i></div>
+        </div>
+      </div>
+      <div style="width:7.5rem;height:1.5rem; margin-top:2.5rem;">
+        <div id="settingPanel1" class="defaultPanel" style="width:3.55rem;height:3.55rem;"></div>
+        <div id="settingPanel2" class="defaultPanel" style="width:3.55rem;height:3.55rem; margin-left:3.95rem;"></div>
+      </div>
+      <div style="width:7.5rem;height:1.5rem; margin-top:8.2rem;">
+        <!-- 设置按钮 -->
+        <div id="settingBtn" class="defaultGroup" style="width:1.5rem;height:1.5rem;">
+          <div class="defaultPanel" style="width:100%;height:100%;"></div>
+          <div class="defaultText" style="margin-left:0.36rem; margin-top:0.26rem;font-size:0.9rem; transition-duration:5s; animation:lm_rotate 5s linear infinite;"><i class="fa fa-cog"></i></div>
+        </div>
+        <div class="defaultGroup" style="width:1.5rem;height:1.5rem;margin-left:2rem;">
+          <div class="defaultPanel" style="width:100%;height:100%;"></div>
+        </div>
+        <!-- 锁定按钮 -->
+        <div id="lockBtn" class="defaultGroup" style="width:1.5rem;height:1.5rem;margin-left:4rem;" onclick='lock()'>
+          <div class="defaultPanel" style="width:100%;height:100%;"></div>
+          <div class="defaultText" style="margin-left:0.455rem; margin-top:0.28rem;font-size:0.9rem;"><i class="fa fa-lock"></i></div>
+        </div>
+        <div class="defaultGroup" style="width:1.5rem;height:1.5rem;margin-left:6rem;">
+          <div class="defaultPanel" style="width:100%;height:100%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 中心面板 -->
+    <div id="centerPanel" style=" width:7.5rem;height:1.5rem;margin-top:5.5rem;margin-left:0.2rem;">
+      <!-- 时钟面板 -->
+      <div id="clockPanel" class="defaultPanel" style="width:100%;height:100%;filter: blur(1px); display:none;"></div>
+      <div id="clockTime" class="defaultText" style="width:100%;height:100%; margin-top:0.38rem; text-align:center; font-family:'dif'; font-size:0.8rem;"></div>
+      <!-- 消息提示面板 -->
+      <div id="tipPanel" style="width:100%;height:100%;border-radius:6px; overflow:hidden;"></div>
+    </div>
+    
+    <!-- 截图相关 -->
+    <video id="tvideo" style="width:1920px; height:1080px; position: absolute; display:none;" controls></video>
+    <canvas id="myCanvas" width="150px" height="30px" style=" position:absolute; left:0px; top:10px; display:none;"></canvas>
+    
+    <script>
+      // 常用工具
+      window.$ = window.jQuery = require('./res/jquery-1.11.0.min.js');
+      require('./lm_src/normal.js');
+
+      var ipc = require('electron').ipcRenderer;
+      var request = require('request');
+      var log = function(text){
+        ipc.sendSync('sendMsg', {op:'log', log:text});
+      }
+      console.log = log;
+      console.log('[main page] init log module');
+      //---------------------- 时钟 -----------------------
+      const BeijingTimeModule = require('./lm_src/beijingTimeClock');
+      var bJTimeUtil = new BeijingTimeModule();
+      bJTimeUtil.startTimer((bjDate)=>{
+        window.jQuery('#clockPanel').show();
+        window.jQuery('#clockTime').text( bjDate.Format('yyyy/MM/dd hh:mm:ss') );
+      });
+      // ----------------------- 按钮经过时动画效果 ----------------------------
+      var hoverPanelClass = 'a-bounce';
+      jQuery(".defaultGroup").mouseenter(function(){
+        jQuery(this).addClass(hoverPanelClass);
+      });
+      jQuery(".defaultGroup").mouseleave(function(){
+        jQuery(this).removeClass(hoverPanelClass);
+      });
+      // 按钮经过时tip
+      var closeTipId = "";
+      jQuery("#closeBtn").mouseenter(function(){
+        closeTipId = showTip({text:'退出程序', theme:'error'});
+      }).mouseleave(function(){
+        hideTip(closeTipId);
+      });
+      
+      var settingTipId = "";
+      jQuery("#settingBtn").mouseenter(function(){
+        settingTipId = showTip({text:'设置'});
+      }).mouseleave(function(){
+        hideTip(settingTipId);
+      });
+      var lockTipId = "";
+      jQuery("#lockBtn").mouseenter(function(){
+        lockTipId = showTip({text:'锁定：将无法选中界面'});
+      }).mouseleave(function(){
+        hideTip(lockTipId);
+      });
+
+      // ----------------------- 锁定 -----------------------
+      var lock = function(){
+        ipc.sendSync('sendMsg', {op:'lock'});
+      }
+      // ----------------------- 结束app -----------------------
+      var closeApp = function(){
+        ipc.sendSync('sendMsg', {op:'closeApp'});
+      }
+      // ---------------------- 窗体大小变化事件 -----------------------
+      var t_of = 1.2; // 用于消除计算误差
+      window.onresize = function(){
+         document.getElementsByTagName('html')[0].style.fontSize = (petInitHeight+zoomRate*(z_h-t_of))/10+'px';
+      }
+      var mouseX = 0, mouseY = 0;
+      // ---------------------- 通信返回数据 -----------------------
+      log('[main page] start listening handle msg...');
+      ipc.on('sendMsg', (event, arg) => {
+         switch(arg.op){
+            // ------------- 鼠标坐标 --------------
+            case 'mousePosition':
+              mouseX = arg.x;
+              mouseY = arg.y;
+            break;
+            // ------------- 锁定 --------------
+            case 'lock':
+              showTip({
+                theme : 'success',
+                text : arg.lockState?'<i class="fa fa-lock"></i> 锁定成功，Alt+L解锁' : '<i class="fa fa-unlock"></i> 取消锁定成功',
+                showTime : 2000
+              });
+              if(isSettingMode){
+                toggleSetting();
+              }
+            break;
+            // ------------- 透明 --------------
+            case 'opacityIncr':
+              opacityIncr();
+            break;
+            case 'opacityDecr':
+              opacityDecr();
+            break;
+         }
+      })
+
+      // ---------------------- 提示栏 --------------------
+      // option字段： text:本文； theme:'success','info','error','warning'； showTime: 显示毫秒数，为空则长显；
+      // 返回 提示框唯一id
+      var incr_tipId = 0;
+      var showTip = function(option){
+        var inAnima = 'a-bounceinB', outAnima = 'a-bounceoutT';
+        window.incr_tipId ++;
+        if(window.incr_tipId == 1000){
+          window.incr_tipId = 0;
+        }
+        if(!option.theme){
+          option.theme = 'info';
+        }
+        var thisTipId = 'tip_' + window.incr_tipId;
+        var tipDomClass = 'tip_' + option.theme;
+        var tipDom_html = '<div id="{0}" class="{1}" style="width:100%;height:100%;display:none;">'.format(thisTipId, tipDomClass);
+        tipDom_html += '<div class="tip_text" style="width:100%;height:100%; margin-top:0.45rem; text-align:center; font-size:0.6rem;">{0}</div>'.format(option.text);
+        tipDom_html += '</div>';
+
+        var tipDom = window.jQuery(tipDom_html);
+        window.jQuery('#tipPanel').append(tipDom);
+        tipDom.addClass(inAnima).show();
+        if(option.showTime && option.showTime > 0){
+          setTimeout('hideTip("{0}")'.format(thisTipId), option.showTime);
+        }
+        return thisTipId;
+      }
+      var hideTip = function(tipId){
+          var inAnima = 'a-bounceinB', outAnima = 'a-bounceoutT';
+          window.jQuery('#' + tipId).removeClass(inAnima).addClass(outAnima);
+          var _removeHideTip = function(){
+            window.jQuery('#' + tipId).remove();
+          }
+          setTimeout(_removeHideTip, 2000);
+      }
+      // ---------------------- 切换显示设置面板 ---------------------
+      var isSettingMode = false;
+      var _finishHideAnim = true;
+      var toggleSetting = function(){
+        // var inAnima = 'a-flipinX', outAnima = 'a-flipoutX';
+        var inAnima = 'a-bounceinT', outAnima = 'a-bounceoutT';
+        if(isSettingMode == false && _finishHideAnim == false){
+          return;
+        }
+        isSettingMode = !isSettingMode;
+        if(isSettingMode){
+          jQuery('#centerPanel').animate({marginTop:'+=4.6rem'},"fast");
+          jQuery('#settingPanel').removeClass(outAnima).addClass(inAnima).show();
+        }else{
+          _finishHideAnim = false;
+          jQuery('#centerPanel').animate({marginTop:'-=4.6rem'},"slow");
+          jQuery('#settingPanel').removeClass(inAnima).addClass(outAnima);
+          var _onFinishHideAnim = function(){
+            jQuery('#settingPanel').hide();
+            window._finishHideAnim = true;
+          }
+          setTimeout(_onFinishHideAnim, 700);
+        }
+      }
+      // ---------------------- 移动 ---------------------
+      var petWin = document.getElementsByTagName('body')[0];
+      var petImg = document.getElementById('pet');
+      var isMouseDown = false;
+      var distanceX = 0, distanceY = 0;
+      petWin.onmousedown = function(ev){
+　　　　　　 var oevent = ev || event;
+        if(oevent.button == 0){ // 左键拖拽
+  　　　　　　 distanceX = oevent.clientX;
+  　　　　　　 distanceY = oevent.clientY;
+          isMouseDown = true;
+          ipc.sendSync('sendMsg', {op:'mouseDown'});
+        }else if(oevent.button == 2){ // 右键打开设置面板
+          toggleSetting();
+        }
+      }
+　　　　 petWin.onmousemove = function(ev){
+        if(isMouseDown){
+          var oevent = ev || event;
+          ipc.sendSync('sendMsg', {op:'move', x:oevent.clientX - distanceX, y:oevent.clientY - distanceY});
+        }
+　　　　 };
+　　　　 petWin.onmouseup = function(){
+　　　　　 　isMouseDown = false;
+        ipc.sendSync('sendMsg', {op:'mouseUp'});
+　　　　 };
+      // ---------------------- 缩放 -----------------------
+      var petInitWidth = 7.5, petInitHeight = 11.1;
+      var petWidth = petInitWidth, petHeight = petInitHeight;
+      jQuery('body').width(petWidth).height(petHeight);
+      var zoomRate = 0, z_w = 8, z_h = 12;
+      petWin.onmousewheel = function(ev){
+        var oevent = ev || event;
+        if(oevent.wheelDelta != 0){
+          zoomRate = oevent.wheelDelta>0 ? zoomRate+1 : zoomRate-1;
+          petWidth = petInitWidth + z_w*zoomRate;
+          petHeight = petInitHeight + z_h*zoomRate;
+          ipc.sendSync('sendMsg', {op:'resize', enlarge:oevent.wheelDelta>0, w:petWidth, h:petHeight});
+        }
+      }
+      // ---------------------- 透明 -----------------------
+      var opacity = 1;
+      var opacityIncr = function(){
+        opacity -= 0.14;
+        if(opacity < 0.4){
+          opacity = 0.4;
+        }
+        jQuery("body").css({ opacity: opacity });
+      }
+      var opacityDecr = function(){
+        opacity += 0.14;
+        if(opacity > 1){
+          opacity = 1;
+        }
+        jQuery("body").css({ opacity: opacity });
+      }
+      // ------------------- 初始化窗体 --------------------
+      log('[main page] start init window frame...');
+      var _winCount = 0;
+      var initWin = function(){
+        _winCount++;
+        if(_winCount >= 40){
+          clearInterval(initInterVal);
+        }
+        petWin.onmousewheel({wheelDelta:1});
+      }
+      var initInterVal = setInterval(initWin, 7);
+      // ------------------------ pet body 动画 -----------------------------
+      var petBodyIndex = 0;
+      var _showBodyByIndex = function(index){
+        for(var i = 1; i <= 8; i++){
+          var petImg = window.document.getElementById('pet_body_'+i);
+          if(i == index){
+            petImg.style.display = 'block';
+          }else{
+            petImg.style.display = 'none';
+          }
+        }
+      }
+      // 按照指令执行body动画; 指令格式str：一次循环时长，...
+      var exeBodyIns = function(bodyInsStr, exeIndex){
+        exeIndex++;
+        var insArray = bodyInsStr.split(',');
+        if(insArray.length == exeIndex){
+          exeIndex = 0;
+          bodyInsStr = ''+ parseInt(Math.round(500 + Math.random()*1500));
+          insArray = bodyInsStr.split(',');
+        }
+        window._bodyExecOnce(parseInt(insArray[exeIndex]));
+        window.setTimeout('exeBodyIns("{0}",{1})'.format(bodyInsStr, exeIndex), parseInt(insArray[exeIndex]));
+      }
+      var _bodyExecOnce = function(totalTime){
+        var et = parseInt(totalTime/5);
+        window._bodyProc(et, 5);
+      }
+      var _bodyProc = function(et, surtimes){
+        surtimes --;
+        if(surtimes != -1){
+          window._nextBody();
+          window.setTimeout('_bodyProc({0},{1})'.format(et, surtimes), et);
+        }
+      }
+      var _nextBody = function(){
+        window.petBodyIndex ++ ;
+        if(window.petBodyIndex > 6){
+          window.petBodyIndex = 1;
+        }
+        window._showBodyByIndex(window.petBodyIndex);
+      }
+      exeBodyIns('2000', -1);
+      // pet head 动画
+      var petHeadIndex = 0;
+      var headTimeOut = 250;
+      var _showHeadByIndex = function(index){
+        for(var i = 1; i <= 17; i++){
+          if(i == 10){
+            continue;
+          }
+          var petImg = document.getElementById('pet_head_'+i);
+          if(i == index){
+            petImg.style.display = 'block';
+          }else{
+            petImg.style.display = 'none';
+          }
+        }
+      }
+      var nextHeadEye1 = function(){
+        window.petHeadIndex ++ ;
+        if(window.petHeadIndex == 10){
+          window.petHeadIndex = 1;
+        }
+        if(window.petHeadIndex == 3){ 
+          if(Math.random()*100 > 30 ){// 不眨眼
+            window.petHeadIndex = 8;
+            window.headTimeOut = parseInt(180+Math.random()*200);
+          }else{  // 眨眼
+            window.petHeadIndex = 4;
+            window.headTimeOut = 120;
+          }
+        } 
+        if(window.petHeadIndex == 4){
+          if(Math.random()*100 < 15 ){// 闭眼
+            window.petHeadIndex = 11;
+            window.headTimeOut = parseInt(180+Math.random()*200);
+          }
+        } 
+        if(window.petHeadIndex == 18){
+          if(Math.random()*100 < 10 ){// 结束闭眼
+            window.petHeadIndex = 1;
+            window.headTimeOut = parseInt(180+Math.random()*200);
+          }else{  // 继续闭眼
+            window.petHeadIndex = 11
+            window.headTimeOut = parseInt(180+Math.random()*200);
+          }
+        }    
+        window._showHeadByIndex(window.petHeadIndex);
+        window.setTimeout('nextHeadEye1()', window.headTimeOut);
+      }
+      nextHeadEye1();
+
+      // ------------------------ 捕捉屏幕 ------------------------------
+      // require('./screen.js');
+      
+    </script>
+  </body>
+
+</html>
