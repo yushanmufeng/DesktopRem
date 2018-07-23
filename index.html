@@ -43,6 +43,9 @@
       .tip_info{
         background:rgb(138,186,245); 
       }
+      .tip_warning{
+        background:rgb(245,116,0);
+      }
       .tip_error{
         background:rgb(245,116,115);
       }
@@ -335,10 +338,16 @@
       }
       // ---------------------- 透明 -----------------------
       var opacity = 1;
+      var alreadyShowLockTip = false;
+      var lockedTipId = "";
       var opacityIncr = function(){
         opacity -= 0.14;
         if(opacity < 0.4){
           opacity = 0.4;
+        }
+        if(opacity == 0.4 && alreadyShowLockTip == false){
+          alreadyShowLockTip = true;
+          lockedTipId = showTip({text:'Alt+L解除锁定', theme:'warning'});
         }
         jQuery("body").css({ opacity: opacity });
       }
@@ -346,6 +355,10 @@
         opacity += 0.14;
         if(opacity > 1){
           opacity = 1;
+        }
+        if(opacity == 1){
+          alreadyShowLockTip = false;
+          hideTip(lockedTipId);
         }
         jQuery("body").css({ opacity: opacity });
       }
